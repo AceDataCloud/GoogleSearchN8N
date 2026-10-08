@@ -1,0 +1,14 @@
+{
+  "name": "Google Search by AceDataCloud quickstart",
+  "nodes": [
+    {
+      "parameters": {}, "id": "start", "name": "Start", "type": "n8n-nodes-base.manualTrigger", "typeVersion": 1, "position": [0, 0]
+    },
+    {
+      "parameters": { "query": "site:n8n.io verified community nodes", "type": "search", "number": 3, "page": 1 },
+      "id": "search", "name": "Google Search", "type": "@acedatacloud/n8n-nodes-google-search.googleSearch", "typeVersion": 1, "position": [240, 0]
+    }
+  ],
+  "connections": { "Start": { "main": [[{ "node": "Google Search", "type": "main", "index": 0 }]] } },
+  "settings": { "executionOrder": "v1" }
+}
