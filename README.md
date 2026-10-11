@@ -2,7 +2,7 @@
 
 Search Google web results in an n8n workflow through AceDataCloud. This guide uses the n8n 2.42.3 interface in English. The package is an AceDataCloud integration, not an official Google package.
 
-**Package:** `@acedatacloud/n8n-nodes-google-search` · **Source:** [GoogleSearchN8N](https://github.com/AceDataCloud/GoogleSearchN8N) · **API and current pricing:** [Google Search](https://platform.acedata.cloud/documents/44c86226-8eaa-49bf-85f3-1fae8d2e23f1)
+**Package:** `@acedatacloud/n8n-nodes-google-search` · **Source:** [GoogleSearchN8N](https://github.com/AceDataCloud/GoogleSearchN8N) · **API and current pricing:** [Google Search](https://platform.acedata.cloud/documents/44c86226-8eaa-49bf-85f3-1fae8d2e23f1?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=googlesearchn8n_readme_documents_44c86226_8eaa_49bf_85f3_1fae8d2e23f1)
 
 ## 1. Install the node
 
@@ -14,7 +14,9 @@ n8n Cloud exposes community nodes through the node picker only after n8n verifie
 
 ## 2. Get an API key with Google Search access
 
-1. Sign in to [Ace Data Cloud → Applications](https://platform.acedata.cloud/console/applications).
+New account? Register and sign in first. If the Applications page has no General application yet, choose **Initialize General Application**, then continue with the key steps below.
+
+1. Sign in to [Ace Data Cloud → Applications](https://platform.acedata.cloud/console/applications?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=googlesearchn8n_readme_api_key).
 2. Open **General application**. Copy its API key, or choose **Manage Keys → Create** to issue a separate key for n8n.
 3. If you enable **Allowed APIs**, include `/serp/google`. Check Google Search access, your current price, and the available balance before running the workflow.
 
