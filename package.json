@@ -1,6 +1,6 @@
 {
   "name": "@acedatacloud/n8n-nodes-google-search",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Search Google web, images, news, maps, places and videos in n8n through AceDataCloud.",
   "license": "MIT",
   "homepage": "https://github.com/AceDataCloud/GoogleSearchN8N",
