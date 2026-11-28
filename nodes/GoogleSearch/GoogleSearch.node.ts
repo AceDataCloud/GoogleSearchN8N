@@ -115,7 +115,7 @@ export function searchBody(get: (name: string) => unknown): IDataObject {
 function requestFailure(error: unknown): OperationalError | UserError {
   const message = error instanceof Error ? error.message.toLowerCase() : '';
   if (/credential/.test(message) && /(not found|not set|missing|not configured|not available|required)/.test(message))
-    return new UserError('A Google Search by AceDataCloud credential is required.');
+    return new UserError('A Google Search credential is required.');
   const code = error && typeof error === 'object'
     ? String((error as { httpCode?: unknown; statusCode?: unknown }).httpCode
       ?? (error as { statusCode?: unknown }).statusCode ?? '')
@@ -128,14 +128,14 @@ function requestFailure(error: unknown): OperationalError | UserError {
 
 export class GoogleSearch implements INodeType {
   description: INodeTypeDescription = {
-    displayName: 'Google Search by AceDataCloud',
+    displayName: 'Google Search',
     name: 'googleSearch',
     icon: { light: 'file:icon.svg', dark: 'file:icon.dark.svg' },
     group: ['transform'],
     version: 1,
     subtitle: '={{$parameter["type"]}}',
     description: 'Search Google web, images, news, maps, places or videos through AceDataCloud',
-    defaults: { name: 'Google Search by AceDataCloud' },
+    defaults: { name: 'Google Search' },
     inputs: [NodeConnectionTypes.Main],
     outputs: [NodeConnectionTypes.Main],
     usableAsTool: true,
@@ -152,7 +152,7 @@ export class GoogleSearch implements INodeType {
           if (typeof credentials.apiToken !== 'string' || !credentials.apiToken.trim())
             throw new UserError('Missing API token');
         } catch {
-          throw new NodeOperationError(this.getNode(), 'A Google Search by AceDataCloud credential is required.');
+          throw new NodeOperationError(this.getNode(), 'A Google Search credential is required.');
         }
         const body = searchBody((name) => this.getNodeParameter(name, index, ''));
         let response: unknown;
