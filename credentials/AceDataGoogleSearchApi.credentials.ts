@@ -2,7 +2,7 @@ import type { IAuthenticateGeneric, ICredentialTestRequest, ICredentialType, INo
 
 export class AceDataGoogleSearchApi implements ICredentialType {
   name = 'aceDataGoogleSearchApi';
-  displayName = 'Google Search by AceDataCloud API';
+  displayName = 'Google Search API';
   documentationUrl = 'https://github.com/AceDataCloud/GoogleSearchN8N#credentials';
   icon = 'file:../nodes/GoogleSearch/icon.svg' as const;
   properties: INodeProperties[] = [

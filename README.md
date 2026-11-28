@@ -30,7 +30,7 @@ Copy only the token. Do not paste `Bearer `, quotation marks, or a platform mana
 
 ## 3. Save the credential in n8n
 
-Create a workflow and add **Google Search by AceDataCloud**. In **Credential**, select **Connect to Google Search by AceDataCloud** and then **Create new credential**. Paste the token into **API Token** and save. n8n stores the masked value in its credential store and adds the Bearer header when the node runs.
+Create a workflow and add **Google Search**. In **Credential**, select **Connect to Google Search** and then **Create new credential**. Paste the token into **API Token** and save. n8n stores the masked value in its credential store and adds the Bearer header when the node runs.
 
 For least privilege, set **Allowed HTTP Request Domains** to **Specific Domains** and enter `api.acedata.cloud` before saving.
 
@@ -42,7 +42,7 @@ The credential test calls the free `/openai/models` metadata route. It checks th
 
 ## 4. Run the smallest workflow
 
-Add **Manual Trigger**, then connect it to **Google Search by AceDataCloud**. Set:
+Add **Manual Trigger**, then connect it to **Google Search**. Set:
 
 | Field | First-run value |
 | --- | --- |
