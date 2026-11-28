@@ -16,7 +16,7 @@ n8n Cloud exposes community nodes through the node picker only after n8n verifie
 
 ## 2. Get an API key with Google Search access
 
-New account? Register and sign in first. If the Applications page has no General application yet, choose **Initialize General Application**, then continue with the key steps below.
+Sign in to Applications and copy the API key from the General Application card.
 
 1. Sign in to [Ace Data Cloud → Applications](https://platform.acedata.cloud/console/applications?utm_source=github&utm_medium=referral&utm_campaign=evergreen&utm_content=googlesearchn8n_readme_api_key).
 2. Open **General application**. Copy its API key, or choose **Manage Keys → Create** to issue a separate key for n8n.
